@@ -72,43 +72,43 @@ def encode_dataframe(
 
 
 # # Toy data
-# df = pd.DataFrame({
-#     'Sales': [9.50, 11.22, 10.06, 7.40, 4.15],
-#     'CompPrice': [138, 111, 113, 117, 141],
-#     'Income': [73, 48, 35, 100, 64],
-#     'Advertising': [11, 16, 10, 4, 3],
-#     'Population': [276, 260, 269, 466, 340],
-#     'Price': [120, 83, 80, 97, 128],
-#     'ShelveLoc': ['Bad', 'Good', 'Medium', 'Medium', 'Bad'],
-#     'Age': [42, 65, 59, 55, 38],
-#     'Education': ['high', 'bachelor','bachelor', 'grad', 'high'],
-#     'Urban': ['Yes', 'Yes', 'Yes', 'Yes', 'No'],
-#     'US': ['Yes', 'Yes', 'Yes', 'Yes', 'No']
-# })
+df = pd.DataFrame({
+     'Sales': [9.50, 11.22, 10.06, 7.40, 4.15],
+     'CompPrice': [138, 111, 113, 117, 141],
+     'Income': [73, 48, 35, 100, 64],
+     'Advertising': [11, 16, 10, 4, 3],
+     'Population': [276, 260, 269, 466, 340],
+     'Price': [120, 83, 80, 97, 128],
+     'ShelveLoc': ['Bad', 'Good', 'Medium', 'Medium', 'Bad'],
+     'Age': [42, 65, 59, 55, 38],
+     'Education': ['high', 'bachelor','bachelor', 'grad', 'high'],
+     'Urban': ['Yes', 'Yes', 'Yes', 'Yes', 'No'],
+     'US': ['Yes', 'Yes', 'Yes', 'Yes', 'No']
+ })
 
-# # Specify the encoding for the 'Education' column
-# education_ordering = [['high', 'bachelor', 'grad']]
-# oe_list = [OrdinalEncoder(categories=education_ordering)]
+ # Specify the encoding for the 'Education' column
+education_ordering = [['high', 'bachelor', 'grad']]
+oe_list = [OrdinalEncoder(categories=education_ordering)]
 
 # # Specify the encoding order for 'ShelveLoc' and 'US' columns
-# shelveloc_ordering = [['Bad', 'Medium', 'Good']]
-# us_ordering = [['No', 'Yes']]
-# urban_ordering = [['No', 'Yes']]
+shelveloc_ordering = [['Bad', 'Medium', 'Good']]
+us_ordering = [['No', 'Yes']]
+urban_ordering = [['No', 'Yes']]
 # # Create list of OneHotEncoder objects with specified category orderings
-# ohe_list = [
-#     OneHotEncoder(categories=shelveloc_ordering),
-#     OneHotEncoder(categories=us_ordering),
-#     OneHotEncoder(categories=urban_ordering )
-# ]
+ohe_list = [
+    OneHotEncoder(categories=shelveloc_ordering),
+    OneHotEncoder(categories=us_ordering),
+    OneHotEncoder(categories=urban_ordering )
+]
 
 
-# encoded_df = encode_dataframe(
-#     df,
-#     categorical_vars=['ShelveLoc', 'Urban', 'US'], # list of categorical columns
-#     ordinal_vars=['Education'],  # list of ordinal columns
-#     ohe_list=ohe_list, # matching list of OneHotEncoders
-#     oe_list=oe_list, # matching list of OrdinalEncoders
-#     add_intercept=True # include intercept column
-# )
+encoded_df = encode_dataframe(
+     df,
+     categorical_vars=['ShelveLoc', 'Urban', 'US'], # list of categorical columns
+     ordinal_vars=['Education'],  # list of ordinal columns
+     ohe_list=ohe_list, # matching list of OneHotEncoders
+     oe_list=oe_list, # matching list of OrdinalEncoders
+     add_intercept=True # include intercept column
+ )
 
-# print(encoded_df)
+print(encoded_df)
