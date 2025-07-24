@@ -87,28 +87,28 @@ def encode_dataframe(
 # })
 
  # Specify the encoding for the 'Education' column
-education_ordering = [['high', 'bachelor', 'grad']]
-oe_list = [OrdinalEncoder(categories=education_ordering)]
+#education_ordering = [['high', 'bachelor', 'grad']]
+#oe_list = [OrdinalEncoder(categories=education_ordering)]
 
 # # Specify the encoding order for 'ShelveLoc' and 'US' columns
-shelveloc_ordering = [['Bad', 'Medium', 'Good']]
-us_ordering = [['No', 'Yes']]
-urban_ordering = [['No', 'Yes']]
+#shelveloc_ordering = [['Bad', 'Medium', 'Good']]
+#us_ordering = [['No', 'Yes']]
+#urban_ordering = [['No', 'Yes']]
 # # Create list of OneHotEncoder objects with specified category orderings
-ohe_list = [
+#ohe_list = [
     OneHotEncoder(categories=shelveloc_ordering),
     OneHotEncoder(categories=us_ordering),
     OneHotEncoder(categories=urban_ordering )
-]
+#]
 
 
-encoded_df = encode_dataframe(
-     df,
-     categorical_vars=['ShelveLoc', 'Urban', 'US'], # list of categorical columns
-     ordinal_vars=['Education'],  # list of ordinal columns
-     ohe_list=ohe_list, # matching list of OneHotEncoders
-     oe_list=oe_list, # matching list of OrdinalEncoders
-     add_intercept=True # include intercept column
- )
+#encoded_df = encode_dataframe(
+#     df,
+#     categorical_vars=['ShelveLoc', 'Urban', 'US'], # list of categorical columns
+#     ordinal_vars=['Education'],  # list of ordinal columns
+#     ohe_list=ohe_list, # matching list of OneHotEncoders
+#     oe_list=oe_list, # matching list of OrdinalEncoders
+#     add_intercept=True # include intercept column
+# )
 
-print(encoded_df)
+#print(encoded_df)
