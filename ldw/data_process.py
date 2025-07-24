@@ -72,19 +72,19 @@ def encode_dataframe(
 
 
 # # Toy data
-df = pd.DataFrame({
-     'Sales': [9.50, 11.22, 10.06, 7.40, 4.15],
-     'CompPrice': [138, 111, 113, 117, 141],
-     'Income': [73, 48, 35, 100, 64],
-     'Advertising': [11, 16, 10, 4, 3],
-     'Population': [276, 260, 269, 466, 340],
-     'Price': [120, 83, 80, 97, 128],
-     'ShelveLoc': ['Bad', 'Good', 'Medium', 'Medium', 'Bad'],
-     'Age': [42, 65, 59, 55, 38],
-     'Education': ['high', 'bachelor','bachelor', 'grad', 'high'],
-     'Urban': ['Yes', 'Yes', 'Yes', 'Yes', 'No'],
-     'US': ['Yes', 'Yes', 'Yes', 'Yes', 'No']
- })
+# df = pd.DataFrame({
+#     'Sales': [9.50, 11.22, 10.06, 7.40, 4.15],
+#     'CompPrice': [138, 111, 113, 117, 141],
+#     'Income': [73, 48, 35, 100, 64],
+#     'Advertising': [11, 16, 10, 4, 3],
+#     'Population': [276, 260, 269, 466, 340],
+#     'Price': [120, 83, 80, 97, 128],
+#     'ShelveLoc': ['Bad', 'Good', 'Medium', 'Medium', 'Bad'],
+#     'Age': [42, 65, 59, 55, 38],
+#     'Education': ['high', 'bachelor','bachelor', 'grad', 'high'],
+#     'Urban': ['Yes', 'Yes', 'Yes', 'Yes', 'No'],
+#     'US': ['Yes', 'Yes', 'Yes', 'Yes', 'No']
+# })
 
  # Specify the encoding for the 'Education' column
 education_ordering = [['high', 'bachelor', 'grad']]
