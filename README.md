@@ -15,3 +15,7 @@ Analyzing the SIPP 1991 dataset to understand how 401(k) programs affect househo
 * **Instrument:** `e401` (employer offers 401k) - affects participation but not directly savings
 * **Controls:** Demographics and other savings-related factors
 
+**Setting up your virtual enviroment:**
+```conda create --name <env name> python=3.8```
+```conda activate <env name>```
+```conda install --file requirements.txt```
